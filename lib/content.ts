@@ -89,13 +89,6 @@ export interface SkillGroup {
   items: string[]
 }
 
-export interface Hobby {
-  title: string
-  image: string
-  imageAlt: string
-  html: string
-}
-
 async function toHtml(markdown: string): Promise<string> {
   if (!markdown.trim()) return ""
   const processed = await remark().use(remarkHtml).process(markdown)
@@ -150,6 +143,3 @@ export async function getSkills(): Promise<SkillGroup[]> {
   return readFile("skills.md").data.groups as SkillGroup[]
 }
 
-export async function getHobbies(): Promise<Hobby[]> {
-  return readCollection<Hobby>("hobbies")
-}

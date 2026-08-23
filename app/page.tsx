@@ -3,7 +3,6 @@ import { Education } from "@/components/site/education"
 import { Experience } from "@/components/site/experience"
 import { Footer } from "@/components/site/footer"
 import { Hero } from "@/components/site/hero"
-import { Hobbies } from "@/components/site/hobbies"
 import { Navbar, type NavSection } from "@/components/site/navbar"
 import { Projects } from "@/components/site/projects"
 import { Skills } from "@/components/site/skills"
@@ -12,7 +11,6 @@ import {
   getCertifications,
   getEducation,
   getExperience,
-  getHobbies,
   getProjects,
   getSite,
   getSkills,
@@ -25,7 +23,6 @@ const ALL_NAV_SECTIONS: NavSection[] = [
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
   { id: "education", label: "Education" },
-  { id: "hobbies", label: "Hobbies" },
   { id: "contact", label: "Contact" },
 ]
 
@@ -38,7 +35,6 @@ export default async function Page() {
     skills,
     education,
     certifications,
-    hobbies,
   ] = await Promise.all([
     getSite(),
     getAbout(),
@@ -47,14 +43,11 @@ export default async function Page() {
     getSkills(),
     getEducation(),
     getCertifications(),
-    getHobbies(),
   ])
 
   const cvHref = withBasePath(site.cvPdf)
 
-  const navSections = ALL_NAV_SECTIONS.filter(
-    (s) => s.id !== "hobbies" || hobbies.length > 0
-  )
+  const navSections = ALL_NAV_SECTIONS
 
   return (
     <>
@@ -66,7 +59,6 @@ export default async function Page() {
         <Projects projects={projects} />
         <Skills groups={skills} />
         <Education entries={education} certifications={certifications} />
-        {hobbies.length > 0 && <Hobbies hobbies={hobbies} />}
       </main>
       <Footer site={site} cvHref={cvHref} />
     </>

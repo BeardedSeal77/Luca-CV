@@ -49,15 +49,15 @@
 }
 
 :root {
-    --background: oklch(1 0 0);
+    --background: #f5f3f4;
     --foreground: oklch(0.145 0 0);
-    --card: oklch(1 0 0);
+    --card: #ffffff;
     --card-foreground: oklch(0.145 0 0);
-    --popover: oklch(1 0 0);
+    --popover: #ffffff;
     --popover-foreground: oklch(0.145 0 0);
-    --primary: #d20f39;
+    --primary: #3c6e71;
     --primary-foreground: #ffffff;
-    --brand-2: #e64553;
+    --brand-2: #3c6e71;
     --secondary: oklch(0.967 0.001 286.375);
     --secondary-foreground: oklch(0.21 0.006 285.885);
     --muted: oklch(0.97 0 0);
@@ -67,7 +67,7 @@
     --destructive: oklch(0.577 0.245 27.325);
     --border: oklch(0.922 0 0);
     --input: oklch(0.922 0 0);
-    --ring: #d20f39;
+    --ring: #3c6e71;
     --chart-1: oklch(0.81 0.117 11.638);
     --chart-2: oklch(0.645 0.246 16.439);
     --chart-3: oklch(0.586 0.253 17.585);
@@ -84,27 +84,27 @@
     --sidebar-ring: oklch(0.708 0 0);
 }
 
-/* Dark palette carried over from the old site (Catppuccin Frappé derived) */
+/* Dark palette */
 .dark {
-    --background: #303446;
-    --foreground: #c6d0f5;
-    --card: #414559;
-    --card-foreground: #c6d0f5;
-    --popover: #414559;
-    --popover-foreground: #c6d0f5;
-    --primary: #e78284;
-    --primary-foreground: #303446;
-    --brand-2: #ea999c;
-    --secondary: #292c3c;
-    --secondary-foreground: #c6d0f5;
-    --muted: #494d5e;
-    --muted-foreground: #a5adce;
-    --accent: #494d5e;
-    --accent-foreground: #c6d0f5;
+    --background: #161a1d;
+    --foreground: #e0e0e0;
+    --card: #1e2225;
+    --card-foreground: #e0e0e0;
+    --popover: #1e2225;
+    --popover-foreground: #e0e0e0;
+    --primary: #3c6e71;
+    --primary-foreground: #ffffff;
+    --brand-2: #3c6e71;
+    --secondary: #1e2225;
+    --secondary-foreground: #e0e0e0;
+    --muted: #2a2f33;
+    --muted-foreground: #9a9a9a;
+    --accent: #2a2f33;
+    --accent-foreground: #e0e0e0;
     --destructive: oklch(0.704 0.191 22.216);
     --border: oklch(1 0 0 / 12%);
     --input: oklch(1 0 0 / 15%);
-    --ring: #e78284;
+    --ring: #3c6e71;
     --chart-1: oklch(0.81 0.117 11.638);
     --chart-2: oklch(0.645 0.246 16.439);
     --chart-3: oklch(0.586 0.253 17.585);
